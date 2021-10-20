@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: Times New Roman monospace;
+    background-color: rgb(44, 44, 44);
+}
+.inner-text {
+    text-align: left;
+}
