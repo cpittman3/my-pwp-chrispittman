@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(17, 24, 44);
+    color: white;
+    font-family: Times New Roman monospace;
+    font-size: 22px;
+}
+
+.textSection {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.inner-text {
+    text-align: left;
+}
+
+.mobileImg {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.laptopImg {
+    height: 100%;
+    width: 100%;
+}
+
+.imgSection {
+    padding-left: 180px;
+<!--    display: flex;
+    flex-direction: column;
+    align-content: center; -->
+}
