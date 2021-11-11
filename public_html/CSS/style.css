@@ -8,3 +8,18 @@ body {
 .footer {
     background-color: black;
 }
+
+.header {
+    position: relative;
+    width: 100%;
+}
+
+.headerText {
+    position: absolute;
+    top: 140px;
+    left: 20em;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    /*filter: drop-shadow(0 -6mm 8mm rgb(160, 0, 210));*/
+}
