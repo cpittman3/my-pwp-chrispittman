@@ -23,3 +23,23 @@ body {
     -webkit-text-stroke-color: black;
     /*filter: drop-shadow(0 -6mm 8mm rgb(160, 0, 210));*/
 }
+
+.dispMap:hover {
+    z-index: 5;
+}
+
+.specMap:hover {
+     z-index: 5;
+}
+
+.normMap:hover {
+    z-index: 5;
+}
+
+.ambocMap:hover {
+    z-index: 5;
+}
+
+.dudvMap:hover {
+    z-index: 5;
+}
