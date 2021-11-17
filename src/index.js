@@ -15,7 +15,7 @@ const recaptcha = new Recaptcha(process.env.RECAPTCHA_SITE_KEY, process.env.RECA
 const mailgunClient = mailgun.client({username: "api", key: process.env.MAILGUN_API_KEY})
 app.use(morgan("dev"))
 app.use(express.json())
-app.use(bodyParcer.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 // create a handler/controller for my route
@@ -46,11 +46,14 @@ const handlePostRequest = (request, response) => {
 
     if(errors.isEmpty() === false) {
         const currentError = errors.array()[0]
-        return response.send(`<div class="alert alert-danger" role="alert"<>strong>Oh snap</strong> ${currentError.msg}</div>`)
+        return response.send(
+            `<div class="alert alert-danger" role="alert"<>strong>Oh snap</strong> ${currentError.msg}</div>`
+        )
     }
 
     if(request.recaptcha.error) {
-        return response.send(`<div class='alert alert-danger' role='alert'><strong>Oh snap!</strong>There was an error with Recaptcha please try again</div>div>`
+        return response.send(
+            `<div class='alert alert-danger' role='alert'><strong>Oh snap!</strong>There was an error with Recaptcha please try again</div>div>`
         );
     }
 
