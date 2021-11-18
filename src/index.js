@@ -6,7 +6,7 @@ const {check, validationResult} = require("express-validator")
 const Mailgun = require("mailgun.js")
 const formData = require("form-data")
 const Recaptcha = require("express-recaptcha").RecaptchaV2
-require("dotenv").config()
+// require("dotenv").config()
 
 
 const app = express()
@@ -59,16 +59,18 @@ const handlePostRequest = (request, response) => {
     }
 
     const {email, name, message} = request.body
+    const data = {
+        to: process.env.MAIL_RECIPIENT,
+        from: `${name} <postmaster@${process.env.MAILGUN_DOMAIN}>`,
+        subject: `${email}`,
+        text:message
+    }
 
+    console.log(data)
     mailgunClient.messages.create(
         process.env.MAILGUN_DOMAIN,
-        {
-           to: process.env.MAILGUN_RECIPIENT,
-           from: `${name} <postmaster@${process.env.MAILGUN_DOMAIN}>`,
-           subject: `${email}`,
-           text:message
+        data
 
-        }
     ).then(() => {
         response.send(`div class="alert alert-danger" role='alert'>Email sent successfully</div>`)
     }).catch(error=>{
