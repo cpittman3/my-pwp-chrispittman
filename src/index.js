@@ -39,9 +39,10 @@ const validation = [
     ]
 
 const handlePostRequest = (request, response) => {
+    response.append("Content-Type", "text/html")
 
     const errors = validationResult(request)
-    response.append("access-control-allow-origin", "*")
+    // response.append("access-control-allow-origin", "*")
     console.log(request.body)
 
     if(errors.isEmpty() === false) {
@@ -57,14 +58,14 @@ const handlePostRequest = (request, response) => {
         );
     }
 
-    const {email, subject, name, message} = request.body
+    const {email, name, message} = request.body
 
     mailgunClient.messages.create(
         process.env.MAILGUN_DOMAIN,
         {
            to: process.env.MAILGUN_RECIPIENT,
            from: `${name} <postmaster@${process.env.MAILGUN_DOMAIN}>`,
-           subject: `${email}: ${subject}`,
+           subject: `${email}`,
            text:message
 
         }
