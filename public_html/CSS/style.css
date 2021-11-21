@@ -88,3 +88,12 @@ body {
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
     overflow: hidden;
 }
+
+.nameForm {
+    margin-bottom: -50px;
+    margin-right: 50px;
+}
+
+.emailForm {
+    margin-bottom: -50px;
+}
