@@ -30,6 +30,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 16px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
 .specMap {
@@ -38,6 +39,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 16px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5)
 }
 
 .normMap {
@@ -46,6 +48,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 16px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5)
 }
 
 .ambocMap {
@@ -54,6 +57,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 16px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5)
 }
 
 .dudvMap {
@@ -62,6 +66,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 16px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5)
 }
 
 .dispMap:hover {
@@ -89,11 +94,15 @@ body {
     overflow: hidden;
 }
 
-.nameForm {
-    margin-bottom: -50px;
-    margin-right: 50px;
+
+.gallery {
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    overflow: hidden;
 }
 
-.emailForm {
-    margin-bottom: -50px;
+.formAni {
+    margin-left: 53px;
+    margin-top: -656px;
+    position: relative;
+    z-index: 5;
 }
