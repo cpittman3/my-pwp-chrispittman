@@ -123,3 +123,8 @@ body {
     overflow: hidden;
 }
 
+.logos {
+    font-size: small;
+    color: darkgray;
+}
+

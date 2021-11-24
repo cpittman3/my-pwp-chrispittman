@@ -35,7 +35,7 @@ aniStage2 = () =>
     `  <audio 
            src="./SFX/sfxGlass.mp3" autoplay>Your browser does not support the <code>audio</code> element.
        </audio>
-       <img src="./images/formAni2.gif" width="500" height="680" class="formAni" onClick="formContact()" alt="Not Available">`
+       <img src="./images/formAni2.gif" width="550" height="680" class="formAni" onClick="formContact()" alt="Not Available">`
 
 // Delete the gif freeing the form for use
 formContact = () => {
