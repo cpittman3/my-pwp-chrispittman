@@ -8,6 +8,20 @@
   the gif will be deleted freeing the form for use.
 */
 
+// Prohibit animation on small screens
+if(window.innerWidth < 600) {
+    let formParent = document.querySelector(".formImage")
+    let formChild = document.querySelector(".formAni")
+    formParent.removeChild(formChild)
+}
+
+// Prohibit logo on small screen
+if(window.innerWidth < 600) {
+    let formParent = document.querySelector(".nighthawkCol")
+    let formChild = document.querySelector(".nightHawk")
+    formParent.removeChild(formChild)
+}
+
 // Delete the static dummy form and call for audio and gif to replace it
 formStart = () => {
     let formParent = document.querySelector(".formImage")
@@ -21,7 +35,7 @@ aniStage2 = () =>
     `  <audio 
            src="./SFX/sfxGlass.mp3" autoplay>Your browser does not support the <code>audio</code> element.
        </audio>
-       <img src="./images/formAni2.gif" class="formAni" onClick="formContact()" alt="Not Available">`
+       <img src="./images/formAni2.gif" width="500" height="680" class="formAni" onClick="formContact()" alt="Not Available">`
 
 // Delete the gif freeing the form for use
 formContact = () => {
